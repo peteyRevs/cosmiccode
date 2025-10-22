@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server';
-import ProjectForm from '../components/ProjectForm';
+import ProjectForm from '../../components/ProjectForm';
 
 export default async function NewProjectPage() {
   const supabase = await createClient();
