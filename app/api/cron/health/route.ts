@@ -1,11 +1,8 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-// This endpoint will be called daily by a cron job to keep Supabase active
-// Note: Vercel cron jobs are already secure and can only be triggered by Vercel
 export async function GET() {
   try {
-    // Create a Supabase client
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!

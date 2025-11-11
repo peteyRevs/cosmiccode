@@ -36,6 +36,15 @@ export default function Projects() {
     },
     {
       id: '3',
+      title: 'Lekker Home',
+      description: 'BigCommerce Stencil project where I built custom landing pages, interactive widgets, and JavaScript features. Also developed an inventory-update sync using Next.js deployed on Vercel for seamless data integration.',
+      image: '/projects/lekkerhome.png',
+      tags: ['JavaScript', 'BigCommerce', 'Next.js', 'Vercel', 'Stencil'],
+      liveUrl: 'https://lekkerhome.com/',
+      category: 'e-commerce',
+    },
+    {
+      id: '4',
       title: 'Uplift Desk',
       description: 'Completely built this e-commerce site on BigCommerce Stencil theme using JavaScript and Foundation. Implemented custom CSS animations and developed a real-time desk builder that generates thousands of product variations dynamically.',
       image: '/projects/upliftdesk.png',
@@ -44,7 +53,7 @@ export default function Projects() {
       category: 'e-commerce',
     },
     {
-      id: '4',
+      id: '5',
       title: 'Arctic Leaf Page Builder & Widgets',
       description: 'Created a BigCommerce app featuring a drag-and-drop page builder with customizable widgets for e-commerce stores. Built using Next.js, React, and Vercel with KV Redis database for real-time data management and widget configurations.',
       image: '/projects/widgetbuilder.png',
@@ -53,22 +62,13 @@ export default function Projects() {
       category: 'web-app',
     },
     {
-      id: '5',
+      id: '6',
       title: 'Seek Outside',
       description: 'Built a complete e-commerce site on BigCommerce Stencil theme using JavaScript and Foundation. Implemented custom CSS animations and interactive shopping features for outdoor gear and equipment.',
       image: '/projects/seekoutside.png',
       tags: ['JavaScript', 'BigCommerce', 'Foundation', 'CSS Animations'],
       liveUrl: 'https://seekoutside.com',
       category: 'e-commerce',
-    },
-    {
-      id: '6',
-      title: 'Shannon Calderon Writes',
-      description: 'Created a WordPress portfolio website for a professional writer using HTML and Bootstrap. Custom theme development with responsive design and content management features.',
-      image: '/projects/shannoncalderonwrites.png',
-      tags: ['WordPress', 'HTML', 'Bootstrap', 'PHP'],
-      liveUrl: 'https://shannoncalderonwrites.com/',
-      category: 'web-app',
     },
     {
       id: '7',
@@ -79,6 +79,16 @@ export default function Projects() {
       liveUrl: 'https://us.instasmile.com/pages/result/',
       category: 'web-app',
     },
+    {
+      id: '8',
+      title: 'Shannon Calderon Writes',
+      description: 'Created a WordPress portfolio website for a professional writer using HTML and Bootstrap. Custom theme development with responsive design and content management features.',
+      image: '/projects/shannoncalderonwrites.png',
+      tags: ['WordPress', 'HTML', 'Bootstrap', 'PHP'],
+      liveUrl: 'https://shannoncalderonwrites.com/',
+      category: 'web-app',
+    },
+
   ];
 
   const [filter, setFilter] = useState<'all' | 'e-commerce' | 'web-app'>('all');
@@ -117,31 +127,28 @@ export default function Projects() {
         >
           <button
             onClick={() => setFilter('all')}
-            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-              filter === 'all'
+            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${filter === 'all'
                 ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
                 : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
+              }`}
           >
             All Projects
           </button>
           <button
             onClick={() => setFilter('e-commerce')}
-            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-              filter === 'e-commerce'
+            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${filter === 'e-commerce'
                 ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
                 : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
+              }`}
           >
             E-Commerce
           </button>
           <button
             onClick={() => setFilter('web-app')}
-            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-              filter === 'web-app'
+            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${filter === 'web-app'
                 ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
                 : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
+              }`}
           >
             Web Apps
           </button>
